@@ -3,7 +3,8 @@ import random
 import string
 import time
 
-WEBHOOK_URL = "https://discord.com/api/webhooks/1373709540448796833/qWlOgPwv3mf_GsVrXkm54VN89PnXJH70FxBNYpAL5EjQkUB7_OcdXeH534A7_VVkmBEP"
+WEBHOOK_URL = "aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTM3MzcwOTU0MDQ0ODc5NjgzMy9xV2xPZ1B3djNtZl9Hc1ZyWGttNTRWTjg5UG5YSkg3MEZ4Qk5ZcEFMNUVqUWtVQjdfT2NkWGVINTM0QTdfVlZrbUJFUA
+"
 
 print("""Nexxi 1.0""")
 time.sleep(2)
