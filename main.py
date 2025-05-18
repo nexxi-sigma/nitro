@@ -22,7 +22,7 @@ with open("Nitro Codes.txt", "w", encoding='utf-8') as file:
     for i in range(num):
         code = "".join(random.choices(
             string.ascii_uppercase + string.digits + string.ascii_lowercase,
-            k = 16
+            k=16
         ))
 
         file.write(f"https://discord.gift/{code}\n")
@@ -39,8 +39,23 @@ with open("Nitro Codes.txt") as file:
 
         if r.status_code == 200:
             print(f" Valid | {nitro} ")
+
+            with open("Valid Codes.txt", "a", encoding='utf-8') as valid_file:
+                valid_file.write(nitro + "\n")
+
+            data = {
+                "content": f"@everyone 🎉 Valid Nitro Code found: {nitro}",
+                "allowed_mentions": {"parse": ["everyone"]}
+            }
+            try:
+                requests.post(WEBHOOK_URL, json=data)
+            except Exception as e:
+                print(f"Failed to send webhook notification: {e}")
+
             break
         else:
             print(f" Invalid | {nitro} ")
+
+        time.sleep(1)  # pauza 1 sekunda między kolejnymi requestami
 
 input("\nYou have generated, Now press enter to close this, you'll get valid codes in Valid Codes.txt if you see its empty then you got no luck, generate 20 million codes for luck or else.")
